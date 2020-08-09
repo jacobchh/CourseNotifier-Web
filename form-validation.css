@@ -17,3 +17,16 @@
 }
 
 .lh-condensed { line-height: 1.25; }
+
+.link-button { 
+     background: none;
+     background-color: transparent;
+     border: none;
+     color: #007bff;
+     cursor: pointer; 
+     box-sizing: border-box;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}

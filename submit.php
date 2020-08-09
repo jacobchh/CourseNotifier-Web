@@ -39,13 +39,6 @@ if (!empty($firstName) || !empty($email) || !empty($course) || !empty($courseNum
     <meta name="description" content="">
     <meta name="author" content="jacob, christina">
     <meta name="generator" content="Jekyll v4.0.1">
-    <meta http-equiv="Refresh" content="0; url='/'" />
-    <script>
-    function alertUser() {
-      alert("Thanks for using CourseNotifier! We'll notify you when a spot in your course opens up.");
-    }
-  </script>
-
     <title>UWO Course Notifier</title>
 
     <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/checkout/">-->
@@ -72,33 +65,34 @@ if (!empty($firstName) || !empty($email) || !empty($course) || !empty($courseNum
     <!-- Custom styles for this template -->
     <link href="form-validation.css" rel="stylesheet">
   </head>
-  <body class="bg-light" onload="alertUser()">
+  <div class="ellipse"></div>
+  <body class="bg-light">
     <div class="container">
   <div class="py-5 text-center">
     <!--<img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
-    <h2 style="margin-top: 1em">Is your UWO course full?</h2>
-    <p class="lead" style="padding: 1em">If you're a Western student who can't get into a Fall 2020 course/lab/tutorial because it's full, you're in the right place! Fill out the form below and we'll send you an email once a spot opens up.</p>
+    <h1 style="color:#4A0084;margin-top:1em">Is your UWO course full?</h1>
+    <p class="lead" style="color:#39266F;padding: 1em">If you're a Western student who can't get into a Fall 2020 course/lab/tutorial because it's full, you're in the right place! Fill out the form below and we'll send you an email once a spot opens up.</p>
   </div>
-
+  
   <div class="row">
     <div class="col-md-12 order-md-1">
       <form class="needs-validation" novalidate action="submit.php" method="POST" onsubmit="return validate();">
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="firstName">First name*</label>
+            <label for="firstName" style="color:#39266F"> First name*</label>
             <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
             <div class="invalid-feedback">
               First name required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="lastName">Last name</label>
+            <label for="lastName" style="color:#39266F">Last name</label>
             <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="">
           </div>
         </div>
 
         <div class="mb-3">
-          <label for="email">Email*</label>
+          <label for="email" style="color:#39266F">Email*</label>
           <input type="email" class="form-control" id="email" name="email" placeholder="" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" onchange="form.retypeEmail.pattern = this.value;" required>
           <div class="invalid-feedback">
             Email address required.
@@ -106,7 +100,7 @@ if (!empty($firstName) || !empty($email) || !empty($course) || !empty($courseNum
         </div>
 
         <div class="mb-3">
-          <label for="email">Re-type email*</label>
+          <label for="email" style="color:#39266F">Re-type email*</label>
           <input type="email" class="form-control" id="retypeEmail" name="retypeEmail" placeholder="" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" required>
           <div class="invalid-feedback">
             Email addresses must match.
@@ -115,7 +109,7 @@ if (!empty($firstName) || !empty($email) || !empty($course) || !empty($courseNum
 
         <div class="row">
           <div class="col-md-8 mb-3">
-            <label for="course">Course*</label>
+            <label for="course" style="color:#39266F">Course*</label>
             <select class="custom-select d-block w-100" id="course" name="course" required>
               <option value="">Choose...</option>
               <option value="ACTURSCI">Actuarial Science</option>
@@ -264,7 +258,7 @@ if (!empty($firstName) || !empty($email) || !empty($course) || !empty($courseNum
           </div>
 
           <div class="col-md-4 mb-3">
-            <label for="courseNum">Class number*  <a href="class-number.png" target="_blank">What's this?</a></label>
+            <label for="courseNum" style="color:#39266F">Class number*  <a href="class-number.png" target="_blank">What's this?</a></label>
             
             <input type="number" class="form-control" id="courseNum" name="courseNum" min="1000" max="99999" placeholder="eg. 1001" required>
             <!--<input type="text" class="form-control" id="courseNum" minlength="4" maxlength="5" placeholder="eg. 1001" required is-invalid>-->
@@ -274,11 +268,11 @@ if (!empty($firstName) || !empty($email) || !empty($course) || !empty($courseNum
           </div>
         </div>
         
-        <div class="py-1 text-center">
+        <!--<div class="py-1 text-center">
           <p  style="margin-top: 2em">Please make sure you have entered the correct information so that we can notify you!</p>
-        </div>
+        </div>-->
         
-        <button style="margin-top: 0.5em" class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+        <button style="margin-top: 2em" class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
       </form>
     </div>
   </div>
@@ -287,6 +281,14 @@ if (!empty($firstName) || !empty($email) || !empty($course) || !empty($courseNum
     <p class="mb-1">UWO Course Notifier (:</p>
     <ul class="list-inline">
       <li class="list-inline-item"><a href="mailto:myuwocourseisfull@gmail.com">Contact</a></li>
+      <li class="list-inline-item">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="submit" class="link-button" value="Donate" title="PayPal - The safer, easier way to pay online!" />
+          <input type="hidden" name="cmd" value="_donations" />
+          <input type="hidden" name="business" value="PFHQJK6PEHMGJ" />
+          <input type="hidden" name="currency_code" value="CAD" />
+        </form>
+      </li>
     </ul>
   </footer>
 </div>
