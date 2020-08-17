@@ -27,9 +27,9 @@
     box-sizing: border-box;
 }
 
-    .link-button:hover {
-        text-decoration: underline;
-    }
+.link-button:hover {
+    text-decoration: underline;
+}
 
 .bd-placeholder-img {
     font-size: 1.125rem;
