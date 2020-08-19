@@ -3,55 +3,27 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png"/>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom-page.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="jacob, christina">
     <meta name="generator" content="Jekyll v4.0.1">
     <title>UWO Course Notifier</title>
   </head>
-  <style>
-    body {
-    text-align: center;
-    padding: 40px 0;
-    background: #EBF0F5;
-    }
-    h1 {
-    color: #c73c3c;
-    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-    font-weight: 900;
-    font-size: 40px;
-    margin-bottom: 10px;
-    }
-    p {
-    color: #404F5E;
-    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-    font-size: 20px;
-    margin: 0;
-    }
-    i {
-    color: #c73c3c;
-    font-size: 130px;
-    line-height: 200px;
-    margin-left: -15px;
-    font-family: Arial, Helvetica, sans-serif;
-    }
-    .card {
-    background: white;
-    padding: 60px;
-    border-radius: 4px;
-    box-shadow: 0 2px 3px #C8D0D8;
-    display: inline-block;
-    margin: 0 auto;
-    }
-  </style>
-  <body>
-    <div class="card">
-      <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
-        <i>X</i>
-      </div>
-      <h1>Error</h1>
-      <p>There was a problem with your submission!<br /> Please try again later.</p>
+  <body class="overview">
+    <div class="container" style="padding-right: 25px; padding-left: 25px">
+        <div class="card">
+            <div style="margin: auto;">
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_oUtnc3.json"  background="transparent"  speed="1" class="player" autoplay></lottie-player>
+                <!--<i class="checkmark">✓</i>-->
+            </div>
+            <h2>Sorry!</h2>
+            <p style="margin-top: 1em">We couldn't process your request.</p>
+            <a role="button" style="margin-top: 2em" class="btn btn-primary btn-med btn-block" name="request" href="https://coursenotifier.com">Try again</a>
+        </div>
     </div>
-  </body>
+  
+</body>
 </html>
