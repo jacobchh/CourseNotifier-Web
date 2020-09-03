@@ -33,10 +33,12 @@
       $result3 = pg_execute($connection, "insert_entry3", array($course));
     
       if ($result and $result2 and $result3) {
-        header("Location: success.html");
+        header("Location: https://www.coursenotifier.com/success", true, 301);
+        exit();
       }
       else {
-        header("Location: oops.html");
+        header("Location: https://www.coursenotifier.com/oops", true, 301);
+        exit();
       }
     }
   }
