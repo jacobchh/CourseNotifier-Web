@@ -265,7 +265,7 @@
       <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">UWO Course Notifier (:</p>
         <ul class="list-inline">
-          <li class="list-inline-item"><a href="mailto:myuwocourseisfull@gmail.com">Contact</a></li>
+          <li class="list-inline-item"><a href="mailto:coursenotifier@gmail.com">Contact</a></li>
           <li class="list-inline-item">
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
               <input type="submit" class="link-button" value="Donate" title="PayPal - The safer, easier way to pay online!" />
