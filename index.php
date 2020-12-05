@@ -15,7 +15,11 @@
 
     if (!empty($firstName) || !empty($email) || !empty($course) || !empty($courseNum)) {
       // create connection
-      $connection = pg_connect("host=$host port=$dbport dbname=$dbname user=$user password=$pass") or die();
+      $connection = pg_connect("host=$host port=$dbport dbname=$dbname user=$user password=$pass");
+      if (!$connection) {
+         header("Location: https://www.coursenotifier.com/oops", true, 301);
+         exit();
+      }
   
       // set up query
       $query = "INSERT INTO userinformation (firstname, lastName, email, subject, classnumber, phonenumber) VALUES ($1, $2, $3, $4, $5, $6)";
