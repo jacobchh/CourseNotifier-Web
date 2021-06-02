@@ -69,7 +69,7 @@
       <div class="py-5 text-center">
         <!--<img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
         <h1 style="color:#4A0084;margin-top:1em">Is your UWO course full?</h1>
-	<p class="lead" style="color:#39266F;padding: 1em">Thanks for 1200+ users! We appreciate you all. Hopefully, we can continue this service again in the future. RIP Course Notifier.</p>
+	<p class="lead" style="color:#39266F;padding: 1em">Thanks for 1200+ users! We appreciate you all. Hopefully, we can continue this service again in the future.</p>
       </div>
       <div class="row">
         <div class="col-md-12 order-md-1">
