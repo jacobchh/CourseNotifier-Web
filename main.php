@@ -1,51 +1,8 @@
 <?php
-  $host = getenv("HOST");
-  $dbport = getenv("DBPORT");
-  $dbname = getenv("DATABASE");
-  $user = getenv("DATABASE_USER");
-  $pass = getenv("PASSWORD");
-  
   if(isset($_POST['submit'])) {
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];
-    $course = $_POST['course'];
-    $courseNum = $_POST['courseNum'];
-    $phoneNumber = NULL;
-
-    if (!empty($firstName) || !empty($email) || !empty($course) || !empty($courseNum)) {
-      // create connection
-      $connection = pg_connect("host=$host port=$dbport dbname=$dbname user=$user password=$pass");
-      if (!$connection) {
-         header("Location: https://www.coursenotifier.com/oops", true, 301);
-         exit();
-      }
-  
-      // set up query
-      $query = "INSERT INTO userinformation (firstname, lastName, email, subject, classnumber, phonenumber) VALUES ($1, $2, $3, $4, $5, $6)";
-      $result = pg_prepare($connection, "insert_entry", $query);
-  
-      $query2 = "INSERT INTO masterlist (firstname, lastName, email, subject, classnumber, phonenumber) VALUES ($1, $2, $3, $4, $5, $6)";
-      $result2 = pg_prepare($connection, "insert_entry2", $query2);
-  
-      $query3 = "INSERT INTO subjectlist (subject) VALUES ($1) ON CONFLICT (subject) DO NOTHING";
-      $result3 = pg_prepare($connection, "insert_entry3", $query3);
-  
-      // execute query
-      $result = pg_execute($connection, "insert_entry", array($firstName, $lastName, $email, $course, $courseNum, $phoneNumber));
-      $result2 = pg_execute($connection, "insert_entry2", array($firstName, $lastName, $email, $course, $courseNum, $phoneNumber));
-      $result3 = pg_execute($connection, "insert_entry3", array($course));
-    
-      if ($result and $result2 and $result3) {
-        header("Location: https://www.coursenotifier.com/success", true, 301);
-        exit();
-      }
-      else {
-        header("Location: https://www.coursenotifier.com/oops", true, 301);
-        exit();
-      }
-    }
-  }
+    header("Location: https://www.coursenotifier.com/success", true, 301);
+    exit();
+   }
 ?>
 <!doctype html>
 <html lang="en">
@@ -69,7 +26,7 @@
       <div class="py-5 text-center">
         <!--<img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
         <h1 style="color:#4A0084;margin-top:1em">Is your UWO course full?</h1>
-	<p class="lead" style="color:#39266F;padding: 1em">Thanks for 1200+ users! We appreciate you all. Hopefully, we can continue this service again in the future. RIP Course Notifier.</p>
+        <p class="lead" style="color:#39266F;padding: 1em">If you're a Western student who can't get into a course/lab/tutorial because it's full, you're in the right place! Fill out the form below and we'll send you an email once a spot opens up.</p>
       </div>
       <div class="row">
         <div class="col-md-12 order-md-1">
@@ -77,26 +34,26 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName" style="color:#39266F"> First name*</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required disabled>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   First name required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName" style="color:#39266F">Last name</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="" disabled>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="">
               </div>
             </div>
             <div class="mb-3">
               <label for="email" style="color:#39266F">Email*</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" onchange="form.retypeEmail.pattern = this.value;" required disabled>
+              <input type="email" class="form-control" id="email" name="email" placeholder="" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" onchange="form.retypeEmail.pattern = this.value;" required>
               <div class="invalid-feedback">
                 Email address required.
               </div>
             </div>
             <div class="mb-3">
               <label for="email" style="color:#39266F">Re-type email*</label>
-              <input type="email" class="form-control" id="retypeEmail" name="retypeEmail" placeholder="" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" required disabled>
+              <input type="email" class="form-control" id="retypeEmail" name="retypeEmail" placeholder="" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" required>
               <div class="invalid-feedback">
                 Email addresses must match.
               </div>
@@ -104,7 +61,7 @@
             <div class="row">
               <div class="col-md-8 mb-3">
                 <label for="course" style="color:#39266F">Course*</label>
-                <select class="custom-select d-block w-100" id="course" name="course" required disabled>
+                <select class="custom-select d-block w-100" id="course" name="course" required>
                   <option value="">Choose...</option>
                   <option value="ACTURSCI">Actuarial Science</option>
                   <option value="AMERICAN">American Studies</option>
@@ -252,7 +209,7 @@
               </div>
               <div class="col-md-4 mb-3">
                 <label for="courseNum" style="color:#39266F">Class number*  <a href="class-number.png" target="_blank">What's this?</a></label>
-                <input type="number" class="form-control" id="courseNum" name="courseNum" min="1000" max="99999" placeholder="eg. 1001" required disabled>
+                <input type="number" class="form-control" id="courseNum" name="courseNum" min="1000" max="99999" placeholder="eg. 1001" required>
                 <!--<input type="text" class="form-control" id="courseNum" minlength="4" maxlength="5" placeholder="eg. 1001" required is-invalid>-->
                 <div class="invalid-feedback">
                   Valid course code required.
@@ -262,7 +219,7 @@
             <!--<div class="py-1 text-center">
               <p  style="margin-top: 2em">Please make sure you have entered the correct information so that we can notify you!</p>
               </div>-->
-            <button style="margin-top: 2em" class="btn btn-secondary btn-lg btn-block" name="submit" type="submit" disabled>Submit</button>
+            <button style="margin-top: 2em" class="btn btn-primary btn-lg btn-block" name="submit" type="submit">Submit</button>
           </form>
         </div>
       </div>
