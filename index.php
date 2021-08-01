@@ -105,6 +105,7 @@
               <div class="col-md-8 mb-3">
                 <label for="course" style="color:#39266F">Course*</label>
                 <select class="custom-select d-block w-100" id="course" name="course" required>
+                  <option value="">Choose...</option>
                   <option value="ACTURSCI"> Actuarial Science </option>
                   <option value="AMERICAN"> American Studies </option>
                   <option value="ADS"> Analytics and Decision Science </option>
@@ -114,7 +115,7 @@
                   <option value="ARABIC"> Arabic </option>
                   <option value="AH"> Art History </option>
                   <option value="ARTHUM"> Arts and Humanities </option>
-                  <option value="ASTRONOM" selected=""> Astronomy </option>
+                  <option value="ASTRONOM"> Astronomy </option>
                   <option value="BIBLSTUD"> Biblical Studies </option>
                   <option value="BIOCHEM"> Biochemistry </option>
                   <option value="BIOLOGY"> Biology </option>
