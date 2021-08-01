@@ -69,7 +69,7 @@
       <div class="py-5 text-center">
         <!--<img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
         <h1 style="color:#4A0084;margin-top:1em">Is your UWO course full?</h1>
-	<p class="lead" style="color:#39266F;padding: 1em">Thanks for 1200+ users! We appreciate you all. Hopefully, we can continue this service again in the future.</p>
+	<p class="lead" style="color:#39266F;padding: 1em">If you're a Western student who can't get into a course/lab/tutorial because it's full, you're in the right place! Fill out the form below and we'll send you an email once a spot opens up.</p>
       </div>
       <div class="row">
         <div class="col-md-12 order-md-1">
@@ -77,26 +77,26 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName" style="color:#39266F"> First name*</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required disabled>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   First name required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName" style="color:#39266F">Last name</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="" disabled>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="">
               </div>
             </div>
             <div class="mb-3">
               <label for="email" style="color:#39266F">Email*</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" onchange="form.retypeEmail.pattern = this.value;" required disabled>
+              <input type="email" class="form-control" id="email" name="email" placeholder="" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" onchange="form.retypeEmail.pattern = this.value;" required>
               <div class="invalid-feedback">
                 Email address required.
               </div>
             </div>
             <div class="mb-3">
               <label for="email" style="color:#39266F">Re-type email*</label>
-              <input type="email" class="form-control" id="retypeEmail" name="retypeEmail" placeholder="" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" required disabled>
+              <input type="email" class="form-control" id="retypeEmail" name="retypeEmail" placeholder="" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" required>
               <div class="invalid-feedback">
                 Email addresses must match.
               </div>
@@ -104,7 +104,7 @@
             <div class="row">
               <div class="col-md-8 mb-3">
                 <label for="course" style="color:#39266F">Course*</label>
-                <select class="custom-select d-block w-100" id="course" name="course" required disabled>
+                <select class="custom-select d-block w-100" id="course" name="course" required>
                   <option value="">Choose...</option>
                   <option value="ACTURSCI">Actuarial Science</option>
                   <option value="AMERICAN">American Studies</option>
@@ -252,7 +252,7 @@
               </div>
               <div class="col-md-4 mb-3">
                 <label for="courseNum" style="color:#39266F">Class number*  <a href="class-number.png" target="_blank">What's this?</a></label>
-                <input type="number" class="form-control" id="courseNum" name="courseNum" min="1000" max="99999" placeholder="eg. 1001" required disabled>
+                <input type="number" class="form-control" id="courseNum" name="courseNum" min="1000" max="99999" placeholder="eg. 1001" required>
                 <!--<input type="text" class="form-control" id="courseNum" minlength="4" maxlength="5" placeholder="eg. 1001" required is-invalid>-->
                 <div class="invalid-feedback">
                   Valid course code required.
