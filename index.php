@@ -262,7 +262,7 @@
             <!--<div class="py-1 text-center">
               <p  style="margin-top: 2em">Please make sure you have entered the correct information so that we can notify you!</p>
               </div>-->
-            <button style="margin-top: 2em" class="btn btn-secondary btn-lg btn-block" name="submit" type="submit">Submit</button>
+            <button style="margin-top: 2em" class="btn btn-primary btn-lg btn-block" name="submit" type="submit">Submit</button>
           </form>
         </div>
       </div>
