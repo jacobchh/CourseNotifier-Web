@@ -102,7 +102,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-8 mb-3">
+              <div class="col-md-7 mb-3">
                 <label for="course" style="color:#39266F">Course*</label>
                 <select class="custom-select d-block w-100" id="course" name="course" required>
                   <option value="">Choose...</option>
@@ -260,10 +260,10 @@
                   Course selection required.
                 </div>
               </div>
-              <div class="col-md-4 mb-3">
-                <label for="courseNum" style="color:#39266F">Class number*  <a href="class-number.png" target="_blank">What's this?</a></label>
-                <input type="number" class="form-control" id="courseNum" name="courseNum" min="1000" max="99999" placeholder="eg. 1001" required>
-                <!--<input type="text" class="form-control" id="courseNum" minlength="4" maxlength="5" placeholder="eg. 1001" required is-invalid>-->
+              <div class="col-md-5 mb-3">
+                <label for="courseNum" style="color:#39266F">Section class number*  <a href="class-number.png" target="_blank">What's this?</a></label>
+                <input type="number" class="form-control" id="courseNum" name="courseNum" min="1000" max="99999" placeholder="eg. 12652" required>
+                <!--<input type="text" class="form-control" id="courseNum" minlength="4" maxlength="5" placeholder="eg. 12652" required is-invalid>-->
                 <div class="invalid-feedback">
                   Valid course code required.
                 </div>
